@@ -1,0 +1,40 @@
+﻿@model MVC_Assignment.Models.calSal
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Strongly type model binding to view</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.id)
+    <input type="text" name="id" value="@Model.id">
+    @*@Html.EditorFor(x => x.id)*@
+    <br />
+    @Html.LabelFor(x => x.name)
+    @Html.EditorFor(x => x.name)
+    <br />
+    @Html.LabelFor(x => x.manager)
+    @Html.EditorFor(x => x.manager)
+    <br />
+        @Html.LabelFor(x => x.dept)
+        @Html.EditorFor(x => x.dept)
+        <br />
+        @Html.LabelFor(x => x.basic)
+        @Html.EditorFor(x => x.basic)
+
+
+        <button type="submit">Add</button>
+        <br />
+        <br />
+}
+
+@if (ViewBag.name != null)
+            {
+    <b>Name:</b> @ViewBag.name <br />
+    <b>Basic:</b> @ViewBag.basic <br />
+    <b>DA :</b> @ViewBag.da <br />
+    <b>HRA :</b> @ViewBag.hra <br />
+    <b>PF:</b> @ViewBag.pf <br />
+    <b>Net Salary:</b> @ViewBag.netsal <br />
+}

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+
+<article>
+
+    @for (var i = 0; i < ViewBag.names.Length; i++)
+    {
+        <h2>Movie Name: @ViewBag.names[i]</h2>
+        <h2>Cast Name: @ViewBag.starcast[i]</h2>
+    }
+
+
+</article>

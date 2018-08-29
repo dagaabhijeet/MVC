@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Second Index</h2>
+
+<h2 style="background-color:darkblue;color:aqua">
+
+
+@*@ViewBag.data*@
+
+@if (TempData["data"] != null)
+{
+    @TempData["data"].ToString() <br/>
+}
+
+ID : @ViewBag.emp.id <br/>
+Name: @ViewBag.emp.name <br />
+Marks: @ViewBag.emp.marks <br />
+Batchcode: @ViewBag.emp.batchcode <br />
+</h2>

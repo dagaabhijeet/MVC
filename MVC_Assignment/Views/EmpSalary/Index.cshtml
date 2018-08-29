@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@{
+    //using (Html.BeginForm("calculateSal","EmpSalary"))
+    using (Html.BeginForm())
+    {
+        @Html.Label(" ID:") 
+        @Html.TextBox("id") <br/>
+        @Html.Label(" Name:")
+        @Html.TextBox("name")<br />
+        @Html.Label(" Manager:")
+        @Html.TextBox("manager")<br />
+        @Html.Label(" Dept:")
+        @Html.TextBox("dept")<br />
+        @Html.Label(" Basic salary:")
+        @Html.TextBox("sal")<br />
+
+        <button type="submit">Calculate</button>
+    }
+}
+<br />
+<br />
+<br />
+<br/>
+@{ 
+
+    if (ViewBag.display != null)
+    {
+        @Html.Raw(@ViewBag.display)
+    }
+}

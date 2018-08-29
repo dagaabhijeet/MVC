@@ -1,0 +1,25 @@
+﻿@model MVC2.Models.Number_ex
+@{
+    ViewBag.Title = "Index1";
+}
+
+<h2>Index1</h2>
+
+@using (Html.BeginForm())
+{
+    @*@Html.Label("Enter No 1") @*this will print 'Enter No 1'*@
+    @Html.LabelFor(x => x.n1) @*this will print the name of variable i.e. n1 in this case (lambda expression)*@
+    @Html.EditorFor(x => x.n1)
+    <br />
+    @Html.LabelFor(x => x.n2)
+    @Html.EditorFor(x => x.n2)
+    <button type="submit">Add</button>
+    <br />
+    <br />
+    <br />
+
+}
+@if (ViewBag.res != null)
+{
+<b>Result is : </b> @ViewBag.res
+}

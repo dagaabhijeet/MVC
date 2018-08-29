@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index3";
+}
+
+<h2>HTML Helper Class</h2>
+
+
+@{
+    //using (Html.BeginForm("add", "Second", FormMethod.Post)) // to get result on a new screen from the add method
+    using (Html.BeginForm()) //to call the overloaded Index3 method for result
+    {
+        @Html.Label("Enter No 1")
+        @Html.TextBox("n1") <br />
+        @Html.Label("Enter No 2")
+        @Html.TextBox("n2") <br />
+
+        <button type="submit">Add</button>
+        <br />
+        <br />
+        <br />
+ 
+            }
+}
+
+       @{
+            if (ViewBag.res != null)
+            {
+                <b>Result:</b> @ViewBag.res
+            }
+        }

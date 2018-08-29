@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index4";
+}
+
+<h2>Index4</h2>
+
+@foreach (var temp in ViewBag.list)
+{
+    <b>ID:</b>   @temp.id <br />
+    <b>Name:</b>   @temp.name <br />
+    <b>Batch:</b>    @temp.batchcode <br />
+    <b>Marks:</b>  @temp.marks <br />
+    <hr>
+}
